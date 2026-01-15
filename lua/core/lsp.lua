@@ -2,6 +2,8 @@ vim.lsp.enable({
 	"bashls",
 	"copilot",
 	"eslint",
+	"golangci_lint_ls",
+	"gopls",
 	"lua_ls",
 	"nil_ls",
 	"tsgo",

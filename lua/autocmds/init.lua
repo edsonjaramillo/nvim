@@ -1,5 +1,6 @@
 -- Auto commands configuration for formattter
 require("autocmds.format.alejandra")
+require("autocmds.format.gofumpt")
 require("autocmds.format.prettier")
 require("autocmds.format.shfmt")
 require("autocmds.format.stylua")

@@ -45,6 +45,7 @@ return {
 				"tsx",
 				-- programming
 				"python",
+				"go",
 				-- config
 				"json",
 				"jsonc",
