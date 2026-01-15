@@ -7,6 +7,8 @@ vim.lsp.enable({
 	"lua_ls",
 	"nil_ls",
 	"tsgo",
+	"ty",
+	"yamlls",
 })
 
 vim.diagnostic.config({
