@@ -20,6 +20,7 @@ return {
 			timeout = 1000,
 		},
 		config = function()
+			vim.notify = require("notify")
 			for _, highlight in ipairs(highlights) do
 				for level, color in pairs(colors) do
 					vim.api.nvim_set_hl(0, "Notify" .. level .. highlight, { fg = color })
