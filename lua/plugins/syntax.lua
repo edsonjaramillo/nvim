@@ -25,7 +25,6 @@ return {
 				"go",
 				-- config
 				"json",
-				"jsonc",
 				"markdown",
 				"toml",
 				"yaml",
