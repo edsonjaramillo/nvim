@@ -1,5 +1,5 @@
-local wk = require("which-key")
 local tt = require("toggleterm")
+local wk = require("which-key")
 
 wk.add({
 	mode = "n",
