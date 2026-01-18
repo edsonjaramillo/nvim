@@ -1,37 +1,14 @@
+local languages = require("utils.languages")
+
 ---@module 'lazy'
 ---@type LazySpec[]
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
-		branch = "main",
 		build = ":TSUpdate",
-		opts = {
-			ensure_installed = {
-				"vim",
-				"vimdoc",
-				"nix",
-				"lua",
-				-- shell
-				"bash",
-				-- web
-				"css",
-				"html",
-				"javascript",
-				"typescript",
-				"tsx",
-				-- programming
-				"python",
-				"go",
-				-- config
-				"json",
-				"markdown",
-				"toml",
-				"yaml",
-			},
-		},
-		config = function(_, opts)
-			require("nvim-treesitter").install(opts.ensure_installed)
+		config = function()
+			require("nvim-treesitter").install(languages.tree_sitter)
 		end,
 	},
 	{
