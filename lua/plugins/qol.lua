@@ -42,6 +42,10 @@ return {
 		end,
 	},
 	{
+		"mg979/vim-visual-multi",
+		lazy = false,
+	},
+	{
 		"yutkat/confirm-quit.nvim",
 		event = "CmdlineEnter",
 		opts = {},
