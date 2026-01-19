@@ -12,24 +12,6 @@ return {
 		lazy = false,
 	},
 	{
-		"nvim-focus/focus.nvim",
-		version = "*",
-		config = function()
-			require("focus").setup({
-				autoresize = {
-					enable = false,
-				},
-				split = {
-					bufnew = true,
-				},
-				ui = {
-					relativenumber = true,
-					winhighlight = false,
-				},
-			})
-		end,
-	},
-	{
 		"windwp/nvim-ts-autotag",
 		config = function(_, opts)
 			require("nvim-ts-autotag").setup({

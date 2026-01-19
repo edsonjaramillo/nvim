@@ -7,6 +7,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
 		build = ":TSUpdate",
+		opts = {},
 		config = function()
 			require("nvim-treesitter").install(languages.tree_sitter)
 		end,
