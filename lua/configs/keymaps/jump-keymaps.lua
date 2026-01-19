@@ -8,16 +8,24 @@ wk.add({
 		function()
 			flash.jump()
 		end,
+		desc = "Flash Jump",
 	},
 })
 
 wk.add({
 	mode = { "x", "o" },
 	{
-		"R",
+		"r",
 		function()
 			flash.treesitter_search()
 		end,
 		desc = "Treesitter Search",
+	},
+	{
+		"s",
+		function()
+			flash.treesitter()
+		end,
+		desc = "Treesitter",
 	},
 })
