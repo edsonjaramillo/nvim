@@ -1,6 +1,7 @@
 vim.lsp.enable({
 	"bashls",
 	"copilot",
+	"emmet_language_server",
 	"eslint",
 	"golangci_lint_ls",
 	"gopls",
@@ -12,7 +13,8 @@ vim.lsp.enable({
 })
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
+	virtual_lines = true,
 	underline = false,
 	update_in_insert = false,
 	severity_sort = true,
