@@ -7,6 +7,11 @@ return {
 		---@module 'flash'
 		---@type Flash.Config
 		opts = {
+			modes = {
+				search = {
+					enabled = true,
+				},
+			},
 			search = {
 				mode = "search",
 			},

@@ -29,3 +29,14 @@ wk.add({
 		desc = "Treesitter",
 	},
 })
+
+wk.add({
+	mode = { "o" },
+	{
+		"R",
+		function()
+			flash.remote()
+		end,
+		desc = "Remote",
+	},
+})
