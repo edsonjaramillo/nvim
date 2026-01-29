@@ -1,3 +1,11 @@
+vim.lsp.config("tailwindcss", {
+	settings = {
+		tailwindCSS = {
+			classFunctions = { "cva", "cx", "cn" },
+		},
+	},
+})
+
 vim.lsp.enable({
 	"bashls",
 	"copilot",
@@ -7,14 +15,14 @@ vim.lsp.enable({
 	"gopls",
 	"lua_ls",
 	"nil_ls",
+	"tailwindcss",
 	"tsgo",
 	"ty",
 	"yamlls",
 })
 
 vim.diagnostic.config({
-	virtual_text = false,
-	virtual_lines = true,
+	virtual_text = true,
 	underline = false,
 	update_in_insert = false,
 	severity_sort = true,
