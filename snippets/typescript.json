@@ -32,12 +32,12 @@
 		"description": "React useEffectHook Async"
 	},
 	"pre JSON stringify": {
-		"prefix": "prejson",
+		"prefix": "_prejson",
 		"body": ["<pre>{JSON.stringify(${1:Array}, null, 2)}</pre>"],
 		"description": "pre tag with json"
 	},
 	"a tag external props": {
-		"prefix": "externalatag",
+		"prefix": "_externalatag",
 		"body": ["rel='noopener nofollow noreferrer external'", "target='_blank'"],
 		"description": "a tag external props"
 	}
