@@ -85,7 +85,4 @@ return {
 			},
 		},
 	},
-	{
-		dir = "~/code/nvim-plugins/extra-pickers.nvim",
-	},
 }
