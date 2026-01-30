@@ -13,7 +13,7 @@ wk.add({
 		"<leader>ff",
 		function()
 			snacks.picker.files({
-				hidden = files_helper.is_dotfiles,
+				hidden = files_helper.is_dotfiles(),
 				exclude = snacks_helper.folder_exclude,
 			})
 		end,
@@ -42,5 +42,53 @@ wk.add({
 			snacks.picker.files({ cwd = "~/code/nvim-plugins/" })
 		end,
 		desc = "Plugin Files (Snacks)",
+	},
+	{
+		"<leader>fm",
+		function()
+			snacks.picker.man()
+		end,
+		desc = "Man Pages (Snacks)",
+	},
+	{
+		"<leader>fH",
+		function()
+			snacks.picker.highlights()
+		end,
+		desc = "Highlights",
+	},
+	{
+		"<leader>fls",
+		function()
+			snacks.picker.lsp_symbols()
+		end,
+		desc = "Go to Definition (Snacks)",
+	},
+	{
+		"<leader>fL",
+		function()
+			snacks.picker.treesitter()
+		end,
+	},
+	{
+		"<leader>fg",
+		function()
+			snacks.picker.grep({ hidden = true, exclude = snack_helpers.folder_exclude })
+		end,
+		desc = "Grep (Snacks)",
+	},
+	{
+		"<leader>fk",
+		function()
+			snacks.picker.keymaps()
+		end,
+		desc = "Keymaps (Snacks)",
+	},
+	{
+		"<leader>fC",
+		function()
+			snacks.picker.commands()
+		end,
+		desc = "Commands (Snacks)",
 	},
 })

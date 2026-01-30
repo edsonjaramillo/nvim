@@ -1,7 +1,7 @@
 require("configs.keymaps.ai-keymaps")
 require("configs.keymaps.buffer-keymaps")
 require("configs.keymaps.explorer-keymaps")
-require("configs.keymaps.files-keymaps")
+require("configs.keymaps.finder-keymaps")
 require("configs.keymaps.find-and-replace-keymaps")
 require("configs.keymaps.git-keymaps")
 require("configs.keymaps.jump-keymaps")
