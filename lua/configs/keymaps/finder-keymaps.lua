@@ -73,7 +73,7 @@ wk.add({
 	{
 		"<leader>fg",
 		function()
-			snacks.picker.grep({ hidden = true, exclude = snack_helpers.folder_exclude })
+			snacks.picker.grep({ hidden = true, exclude = snacks_helper.folder_exclude })
 		end,
 		desc = "Grep (Snacks)",
 	},
