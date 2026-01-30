@@ -3,8 +3,10 @@ local wk = require("which-key")
 
 local commit_prompt = [[
 Write commit message with commitizen convention.
-Write clear, informative commit messages that explain the 'what' and 'why' behind changes,
-not just the 'how'. Use list format if multiple changes.
+Focus on the “why” and “what”, not the “how”.
+Use paragraphs and lists for clarity.
+Write in the present tense, imperative mood.
+Keep each commit focused.
 ]]
 
 local explain_prompt = [[
