@@ -2,7 +2,7 @@
 ---@type LazySpec[]
 return {
 	{
-		dir = "~/code/nvim-plugins/earthshine",
+		dir = "~/code/plugins/earthshine",
 		lazy = false,
 		priority = 1000,
 		config = function()

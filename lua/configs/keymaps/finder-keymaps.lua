@@ -39,7 +39,7 @@ wk.add({
 	{
 		"<leader>fp",
 		function()
-			snacks.picker.files({ cwd = "~/code/nvim-plugins/" })
+			snacks.picker.files({ cwd = "~/code/plugins/" })
 		end,
 		desc = "Plugin Files (Snacks)",
 	},

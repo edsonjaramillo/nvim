@@ -6,7 +6,7 @@ if home == "" then
 	return
 end
 
-local plugins_path = home .. "/code/nvim-plugins/**/*.lua"
+local plugins_path = home .. "/code/plugins/**/*.lua"
 local nvim_config_path = home .. "/dotfiles/nvim/**/*.lua"
 
 local patterns = { plugins_path, nvim_config_path }

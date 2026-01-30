@@ -12,6 +12,9 @@ return {
 		lazy = false,
 	},
 	{
+		dir = "~/code/plugins/misc",
+	},
+	{
 		"windwp/nvim-ts-autotag",
 		config = function(_, opts)
 			require("nvim-ts-autotag").setup({

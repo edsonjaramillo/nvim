@@ -4,7 +4,7 @@ return {
 	{
 		-- "edsonjaramillo/abide",
 		-- switch source to get repo instead of local dev
-		dir = "~/code/nvim-plugins/abide",
+		dir = "~/code/plugins/abide",
 		---@module 'abide'
 		---@type FormOptions
 		opts = {
