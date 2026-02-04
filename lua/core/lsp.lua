@@ -44,6 +44,7 @@ vim.lsp.enable({
 	"marksman",
 	"nil_ls",
 	"tailwindcss",
+	"taplo",
 	"tsgo",
 	"ty",
 	"yamlls",
