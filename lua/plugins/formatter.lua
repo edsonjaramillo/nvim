@@ -6,17 +6,20 @@ return {
 		-- switch source to get repo instead of local dev
 		dir = "~/code/plugins/abide",
 		---@module 'abide'
-		---@type FormOptions
+		---@type AbideOptions
 		opts = {
-			debug = true,
 			formatters = {
-				"alejandra",
-				"gofumpt",
-				"prettier",
-				"shfmt",
-				"stylua",
-				"taplo",
-				"yamlfmt",
+				alejandra = { enabled = true },
+				gofumpt = { enabled = true },
+				prettier = {
+					enabled = true,
+					disable_filetypes = { "yaml" },
+					additional_args = { "--use-tabs" },
+				},
+				shfmt = { enabled = true },
+				stylua = { enabled = true },
+				taplo = { enabled = true },
+				yamlfmt = { enabled = true },
 			},
 		},
 		config = function(_, opts)
