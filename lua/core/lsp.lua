@@ -6,6 +6,32 @@ vim.lsp.config("tailwindcss", {
 	},
 })
 
+local plugin_paths = vim.fn.globpath(vim.fn.expand("~/code/plugins/"), "*/lua", false, true)
+local library = {
+	vim.env.VIMRUNTIME,
+	"${VIMRUNTIME}/lua",
+	"${VIMRUNTIME}/lua/vim",
+	plugin_paths,
+}
+
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				-- library = vim.api.nvim_get_runtime_file("", true),
+				library = library,
+				checkThirdParty = false,
+			},
+		},
+	},
+})
+
 vim.lsp.enable({
 	"bashls",
 	"copilot",
