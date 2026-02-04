@@ -13,22 +13,6 @@ local lazyDevPlugin = {
 }
 
 ---@type LazyDevPlugin
-local npmPlugin = {
-	default = "npm",
-	provider = {
-		name = "npm",
-		module = "blink-cmp-npm",
-		score_offset = 100,
-		opts = {
-			only_latest_version = true,
-		},
-		should_show_items = function()
-			return vim.fn.expand("%:t") == "package.json"
-		end,
-	},
-}
-
----@type LazyDevPlugin
 local copilotPlugin = {
 	default = "copilot",
 	provider = {
@@ -54,9 +38,6 @@ return {
 		},
 		opts = {
 			library = {
-				-- See the configuration section for more details
-				-- Load luvit types when the `vim.uv` word is found
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 				{ path = "wezterm-types", words = { "wezterm" } },
 			},
 		},
@@ -84,7 +65,6 @@ return {
 				default = {
 					copilotPlugin.default,
 					lazyDevPlugin.default,
-					npmPlugin.default,
 					"lsp",
 					"path",
 					"snippets",
@@ -92,7 +72,6 @@ return {
 				},
 				providers = {
 					lazydev = lazyDevPlugin.provider,
-					npm = npmPlugin.provider,
 					copilot = copilotPlugin.provider,
 				},
 			},
