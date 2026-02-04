@@ -15,6 +15,7 @@ vim.lsp.enable({
 	"gopls",
 	"jsonls",
 	"lua_ls",
+	"marksman",
 	"nil_ls",
 	"tailwindcss",
 	"tsgo",
