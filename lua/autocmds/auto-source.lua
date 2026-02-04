@@ -1,31 +1,26 @@
-local notify = require("notify")
-
-local home = os.getenv("HOME") or ""
+local home = vim.env.HOME or ""
 if home == "" then
-	notify("HOME environment variable is not set", "error", { title = "Auto-source (autocmd)" })
+	vim.notify("HOME environment variable is not set", vim.log.levels.ERROR)
 	return
 end
 
 local plugins_path = home .. "/code/plugins/**/*.lua"
-local nvim_config_path = home .. "/dotfiles/nvim/**/*.lua"
+local nvim_config_path = home .. "/.config/nvim/**/*.lua"
 
 local patterns = { plugins_path, nvim_config_path }
 
 vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = patterns,
+	desc = "Auto-source Lua config on save",
 	callback = function(s)
 		-- if filename is dev.lua do not source the file
 		if s.file:match("dev.lua$") then
 			return
 		end
 
-		vim.cmd("source " .. s.file)
+		vim.cmd.source({ args = { s.file } })
 
-		-- if home is not nil then replace absolute path with ~ for better readability
-		if home then
-			s.file = s.file:gsub(home, "~")
-		end
-
-		notify("Reloaded " .. s.file, "info", { title = "Resource" })
+		local display_path = s.file:gsub(home, "~")
+		vim.notify("Reloaded " .. display_path, vim.log.levels.INFO)
 	end,
 })
