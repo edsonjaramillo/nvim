@@ -11,6 +11,20 @@ wk.add({
 		desc = "Toggle Debugger UI",
 	},
 	{
+		"<leader>dv",
+		function()
+			require("osv").launch({ port = 8086 })
+		end,
+		desc = "Launch Lua Debugger (OSV)",
+	},
+	{
+		"<leader>df",
+		function()
+			vim.cmd("luafile %")
+		end,
+		desc = "Debug Current File (OSV)",
+	},
+	{
 		"<leader>dc",
 		function()
 			require("dap").continue()

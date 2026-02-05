@@ -12,6 +12,9 @@ return {
 		end,
 	},
 	{
+		"jbyuki/one-small-step-for-vimkind",
+	},
+	{
 		"leoluz/nvim-dap-go",
 		config = function()
 			require("dap-go").setup()
