@@ -14,7 +14,7 @@ return {
 				prettier = {
 					enabled = true,
 					disable_filetypes = { "yaml" },
-					additional_args = { "--use-tabs" },
+					fallback_args = { "--use-tabs" },
 				},
 				shfmt = { enabled = true },
 				stylua = { enabled = true },
