@@ -12,6 +12,12 @@ return {
 		lazy = false,
 	},
 	{
+		"RRethy/vim-illuminate",
+		config = function(_, opts)
+			require("illuminate").configure()
+		end,
+	},
+	{
 		"windwp/nvim-ts-autotag",
 		config = function(_, opts)
 			require("nvim-ts-autotag").setup({
