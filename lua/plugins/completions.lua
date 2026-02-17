@@ -28,12 +28,11 @@ local copilotPlugin = {
 return {
 	{
 		"folke/lazydev.nvim",
-		ft = "lua", -- only load on lua files
+		ft = "lua",
 		dependencies = {
 			{
 				"DrKJeff16/wezterm-types",
 				lazy = true,
-				version = false, -- Get the latest version
 			},
 		},
 		opts = {
@@ -43,11 +42,10 @@ return {
 			},
 		},
 	},
-	{ -- optional blink completion source for require statements and module annotations
+	{
 		"saghen/blink.cmp",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
-			"alexandre-abrioux/blink-cmp-npm.nvim",
 			{
 				"L3MON4D3/LuaSnip",
 				tag = "v2.4.0",
