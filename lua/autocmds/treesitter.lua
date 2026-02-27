@@ -1,4 +1,4 @@
-local languages = require("utils.languages")
+local languages = require("utils.parsers")
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = languages.filetypes,

@@ -43,6 +43,7 @@ M.tree_sitter = vim.list_extend(M.common, {
 	"caddy",
 	"git_config",
 	"gosum",
+	"jsdoc",
 	"tsx",
 })
 

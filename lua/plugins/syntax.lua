@@ -1,4 +1,4 @@
-local languages = require("utils.languages")
+local languages = require("utils.parsers")
 
 ---@module 'lazy'
 ---@type LazySpec[]
