@@ -13,7 +13,7 @@ return {
 					lualine_a = { "mode" },
 					lualine_b = { "branch", "diff" },
 					lualine_c = { "diagnostics" },
-					lualine_x = { "filename", "encoding", "filetype", "lsp_status" },
+					lualine_x = { "filetype", "lsp_status" },
 					lualine_y = { "windows" },
 					lualine_z = {
 						{
