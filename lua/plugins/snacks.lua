@@ -57,15 +57,8 @@ return {
 						{
 							icon = "󰉓 ",
 							key = "e",
-							desc = "Oil Explorer",
-							action = function()
-								if files_helper.is_dotfiles then
-									oil_helper.enable_hidden()
-								else
-									oil_helper.disable_hidden()
-								end
-								require("oil").open()
-							end,
+							desc = "File Explorer",
+							action = "<cmd>Yazi<cr>",
 						},
 						{
 							icon = "󰒲 ",
