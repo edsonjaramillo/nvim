@@ -13,13 +13,12 @@ return {
 				gofumpt = { enabled = true },
 				prettier = {
 					enabled = true,
-					disable_filetypes = { "yaml" },
 					fallback_args = { "--use-tabs" },
 				},
 				shfmt = { enabled = true },
 				stylua = { enabled = true },
 				taplo = { enabled = true },
-				yamlfmt = { enabled = true },
+				yamlfmt = { enabled = false },
 			},
 		},
 		config = function(_, opts)
