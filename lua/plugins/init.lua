@@ -1,0 +1,19 @@
+-- Plugins as prerequisites
+require("plugins.keymaps")
+require("plugins.theme")
+require("plugins.lsp")
+require("plugins.syntax")
+require("plugins.ui")
+
+-- Rest of the plugins
+require("plugins.ai")
+require("plugins.buffer")
+require("plugins.completion")
+require("plugins.debug")
+require("plugins.explorer")
+require("plugins.finder")
+require("plugins.format")
+require("plugins.jump")
+require("plugins.qol")
+require("plugins.statusline")
+require("plugins.terminal")

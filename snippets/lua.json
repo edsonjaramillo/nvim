@@ -1,0 +1,44 @@
+{
+	"module": {
+		"prefix": "module",
+		"body": ["local M = {}", "", "$1", "", "return M"]
+	},
+	"vimpackadd": {
+		"prefix": "vimpackadd",
+		"body": [
+			"vim.pack.add({",
+			"\t{ src = \"https://github.com/${1:owner}/${2:plugin}\" },",
+			"\t$0",
+			"})"
+		],
+		"description": "vim.pack.add scaffold"
+	},
+	"vimpacksrc": {
+		"prefix": "vimpacksrc",
+		"body": [
+			"{ src = \"https://github.com/${1:owner}/${2:plugin}\" },"
+		],
+		"description": "vim.pack source entry"
+	},
+	"installation header": {
+		"prefix": "installationheader",
+		"body": [
+			"-- ######### INSTALLATION #########"
+		],
+		"description": "installation section header"
+	},
+	"config header": {
+		"prefix": "configheader",
+		"body": [
+			"-- ######### CONFIG #########"
+		],
+		"description": "config section header"
+	},
+	"keymaps header": {
+		"prefix": "keymapsheader",
+		"body": [
+			"-- ######### KEYMAPS #########"
+		],
+		"description": "keymaps section header"
+	}
+}
