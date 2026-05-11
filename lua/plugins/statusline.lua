@@ -17,9 +17,9 @@ require("lualine").setup({
 		lualine_z = {
 			{
 				--- macro recording on statusline
-				-- require("noice").api.statusline.mode.get,
-				-- cond = require("noice").api.statusline.mode.has,
-				-- color = { fg = "#ffffff", bg = "#550000" },
+				require("noice").api.statusline.mode.get,
+				cond = require("noice").api.statusline.mode.has,
+				color = { fg = "#ffffff", bg = "#550000" },
 			},
 		},
 	},
