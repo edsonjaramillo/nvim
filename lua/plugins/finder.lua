@@ -30,6 +30,13 @@ wk.add({
 		desc = "Find Files",
 	},
 	{
+		"<leader>fb",
+		function()
+			fzf_lua.buffers()
+		end,
+		desc = "Find Buffers",
+	},
+	{
 		"<leader>fg",
 		function()
 			fzf_lua.live_grep()

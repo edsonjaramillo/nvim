@@ -69,3 +69,16 @@ wk.add({
 	{ "<leader>sr", ":'<,'>sort r<CR>", desc = "Sort Reverse" },
 	{ "<leader>si", ":'<,'>sort i<CR>", desc = "Sort Ignore Case" },
 })
+
+wk.add({
+	mode = { "n" },
+	{
+		"<leader>b",
+		group = "Buffer",
+	},
+	{
+		"<leader>bd",
+		"<cmd>bdelete<CR>",
+		desc = "Close",
+	},
+})
