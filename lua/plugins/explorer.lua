@@ -1,6 +1,15 @@
 -- ######### INSTALLATION #########
 vim.opt.runtimepath:prepend("~/code/plugins/quickfile")
 
+vim.pack.add({
+	{ src = "https://github.com/stevearc/oil.nvim" },
+})
+
+-- ######### CONFIG #########
+local oil = require("oil")
+oil.setup()
+oil.toggle_hidden()
+
 -- ######### KEYMAPS #########
 local quickfile = require("quickfile")
 local wk = require("which-key")
@@ -31,6 +40,13 @@ wk.add({
 			quickfile.delete()
 		end,
 		desc = "Delete File",
+	},
+	{
+		"<leader>ee",
+		function()
+			oil.open()
+		end,
+		desc = "Open Oil Explorer",
 	},
 	{
 		"<leader>em",
