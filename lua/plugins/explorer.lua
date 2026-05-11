@@ -1,17 +1,8 @@
 -- ######### INSTALLATION #########
-vim.pack.add({
-	{ src = "/Users/edson/code/plugins/filemaker" },
-})
-
--- ######### CONFIG #########
-
-local filemaker = require("filemaker")
-filemaker.setup({
-	picker = "fzf_lua",
-	show_hidden = true,
-})
+vim.opt.runtimepath:prepend("~/code/plugins/quickfile")
 
 -- ######### KEYMAPS #########
+local quickfile = require("quickfile")
 local wk = require("which-key")
 
 wk.add({
@@ -23,8 +14,29 @@ wk.add({
 	{
 		"<leader>ec",
 		function()
-			filemaker.create()
+			quickfile.create()
 		end,
 		desc = "Create File",
+	},
+	{
+		"<leader>er",
+		function()
+			quickfile.rename()
+		end,
+		desc = "Rename File",
+	},
+	{
+		"<leader>ed",
+		function()
+			quickfile.delete()
+		end,
+		desc = "Delete File",
+	},
+	{
+		"<leader>em",
+		function()
+			quickfile.move()
+		end,
+		desc = "Move File",
 	},
 })
