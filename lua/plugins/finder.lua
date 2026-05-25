@@ -30,6 +30,25 @@ wk.add({
 		desc = "Find Files",
 	},
 	{
+		"<leader>fc",
+		function()
+			fzf_lua.files({
+				cwd = "~/.config/nvim",
+			})
+		end,
+		desc = "Find nvim config files",
+	},
+	{
+		"<leader>f.",
+		function()
+			fzf_lua.files({
+				cwd = "~/dotfiles/",
+				hidden = true,
+			})
+		end,
+		desc = "Find dotfiles",
+	},
+	{
 		"<leader>fb",
 		function()
 			fzf_lua.buffers()
