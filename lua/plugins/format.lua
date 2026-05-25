@@ -14,7 +14,7 @@ require("abide").setup({
 	formatters = {
 		alejandra = { enabled = true },
 		gofumpt = { enabled = true },
-		prettier = { enabled = true, fallback_args = { "--use-tabs" } },
+		oxfmt = { enabled = true },
 		ruff = { enabled = true, config_files = { "ruff.toml" } },
 		shfmt = { enabled = true },
 		stylua = { enabled = true },

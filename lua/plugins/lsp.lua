@@ -49,6 +49,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"marksman",
 	"nil_ls",
+	"oxlint",
 	"tailwindcss",
 	"taplo",
 	"tsgo",
