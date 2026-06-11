@@ -13,7 +13,7 @@ require("confirm-quit").setup()
 -- ######### KEYMAPS #########
 local esc_keys = { "jk", "kj" }
 for _, key in ipairs(esc_keys) do
-	vim.keymap.set({ "i", "v", "x", "s", "c" }, key, "<Esc>", {
+	vim.keymap.set({ "i", "s", "c" }, key, "<Esc>", {
 		noremap = true,
 		silent = true,
 		desc = "Exit to Normal mode",
