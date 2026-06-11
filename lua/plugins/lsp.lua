@@ -13,6 +13,13 @@ vim.lsp.config("tailwindcss", {
 	},
 })
 
+vim.lsp.config("oxlint", {
+	settings = {
+		typeAware = true,
+		disableNestedConfig = true,
+	},
+})
+
 local plugin_paths = vim.fn.globpath(vim.fn.expand("~/code/plugins/"), "*/lua", false, true)
 local library = vim.list_extend({
 	vim.env.VIMRUNTIME,
