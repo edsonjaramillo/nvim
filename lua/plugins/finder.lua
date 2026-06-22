@@ -11,6 +11,9 @@ fzf_lua.setup({
 			["default"] = require("fzf-lua.actions").file_edit,
 		},
 	},
+	fzf_opts = {
+		["--algo"] = "v2",
+	},
 })
 
 -- ######### KEYMAPS #########
@@ -25,7 +28,11 @@ wk.add({
 	{
 		"<leader>ff",
 		function()
-			fzf_lua.files()
+			fzf_lua.files({
+				actions = {
+					["default"] = require("fzf-lua.actions").file_edit,
+				},
+			})
 		end,
 		desc = "Find Files",
 	},
@@ -58,7 +65,11 @@ wk.add({
 	{
 		"<leader>fg",
 		function()
-			fzf_lua.live_grep()
+			fzf_lua.live_grep({
+				actions = {
+					["default"] = require("fzf-lua.actions").file_edit,
+				},
+			})
 		end,
 		desc = "Find grep",
 	},
