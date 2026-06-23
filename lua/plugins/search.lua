@@ -23,3 +23,18 @@ wk.add({
 		desc = "Open Search and Replace",
 	},
 })
+
+wk.add({
+	mode = "x",
+	{
+		"<leader>so",
+		function()
+			grug_far.with_visual_selection({
+				prefills = {
+					paths = vim.fn.expand("%"),
+				},
+			})
+		end,
+		desc = "Replace Selection in File",
+	},
+})
