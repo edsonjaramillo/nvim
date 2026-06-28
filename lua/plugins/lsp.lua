@@ -20,6 +20,11 @@ vim.lsp.config("oxlint", {
 	},
 })
 
+-- Added to override tsgo settings to use
+-- tsc command instead now that rc is available
+local tsrc = require("experimental.ts-rc")
+vim.lsp.config("tsgo", tsrc.lsp_settings)
+
 local plugin_paths = vim.fn.globpath(vim.fn.expand("~/code/plugins/"), "*/lua", false, true)
 local library = vim.list_extend({
 	vim.env.VIMRUNTIME,
