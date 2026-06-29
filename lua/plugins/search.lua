@@ -6,6 +6,7 @@ vim.pack.add({
 -- ######### CONFIG #########
 local grug_far = require("grug-far")
 grug_far.setup()
+local minify = require("experimental.minify")
 
 -- ######### KEYMAPS #########
 local wk = require("which-key")
@@ -21,6 +22,13 @@ wk.add({
 			grug_far.open()
 		end,
 		desc = "Open Search and Replace",
+	},
+	{
+		"<leader>st",
+		function()
+			minify.remove_tabs()
+		end,
+		desc = "Remove Newline Tabs",
 	},
 })
 
