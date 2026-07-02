@@ -1,7 +1,18 @@
 {
 	"module": {
 		"prefix": "module",
-		"body": ["local M = {}", "", "$1", "", "return M"]
+		"body": ["local M = {}", "", "$1", "", "return M"],
+		"description": "module scaffold"
+	},
+	"module function": {
+		"prefix": "modulefunction",
+		"body": ["function M.${1:function_name}(${2:args})", "\t$0", "end"],
+		"description": "module function scaffold"
+	},
+	"module variable": {
+		"prefix": "modulevariable",
+		"body": ["M.${1:variable_name} = ${2:value}"],
+		"description": "module variable scaffold"
 	},
 	"vimpackadd": {
 		"prefix": "vimpackadd",
@@ -15,30 +26,22 @@
 	},
 	"vimpacksrc": {
 		"prefix": "vimpacksrc",
-		"body": [
-			"{ src = \"https://github.com/${1:owner}/${2:plugin}\" },"
-		],
+		"body": ["{ src = \"https://github.com/${1:owner}/${2:plugin}\" },"],
 		"description": "vim.pack source entry"
 	},
 	"installation header": {
 		"prefix": "installationheader",
-		"body": [
-			"-- ######### INSTALLATION #########"
-		],
+		"body": ["-- ######### INSTALLATION #########"],
 		"description": "installation section header"
 	},
 	"config header": {
 		"prefix": "configheader",
-		"body": [
-			"-- ######### CONFIG #########"
-		],
+		"body": ["-- ######### CONFIG #########"],
 		"description": "config section header"
 	},
 	"keymaps header": {
 		"prefix": "keymapsheader",
-		"body": [
-			"-- ######### KEYMAPS #########"
-		],
+		"body": ["-- ######### KEYMAPS #########"],
 		"description": "keymaps section header"
 	}
 }
