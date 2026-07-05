@@ -70,6 +70,26 @@ wk.add({
 	{ "<leader>si", ":'<,'>sort i<CR>", desc = "Sort Ignore Case" },
 })
 
+local function reopen_current_file()
+	local buf = vim.api.nvim_get_current_buf()
+	local file = vim.api.nvim_buf_get_name(buf)
+
+	if file == "" then
+		vim.notify("Current buffer is not backed by a file", vim.log.levels.WARN)
+		return
+	end
+
+	if vim.bo[buf].modified then
+		vim.notify("Save or discard changes before reopening this file", vim.log.levels.WARN)
+		return
+	end
+
+	local view = vim.fn.winsaveview()
+	vim.cmd("bdelete " .. buf)
+	vim.cmd.edit(vim.fn.fnameescape(file))
+	pcall(vim.fn.winrestview, view)
+end
+
 wk.add({
 	mode = { "n" },
 	{
@@ -80,5 +100,15 @@ wk.add({
 		"<leader>bd",
 		"<cmd>bdelete<CR>",
 		desc = "Close",
+	},
+	{
+		"<leader>bD",
+		"<cmd>BufferLineCloseOthers<CR>",
+		desc = "Close Others",
+	},
+	{
+		"<leader>br",
+		reopen_current_file,
+		desc = "Reopen Current File",
 	},
 })
