@@ -55,8 +55,8 @@ require("blink.cmp").setup({
 	sources = {
 		default = {
 			copilot_provider.default,
-			lazydev_provider.default,
 			"lsp",
+			lazydev_provider.default,
 			"path",
 			"snippets",
 			"buffer",
