@@ -30,6 +30,11 @@ wk.add({
 		end,
 		desc = "Remove Newline Tabs",
 	},
+	{
+		"<leader>sx",
+		"<cmd>nohlsearch<cr>",
+		desc = "Clear Search Highlights",
+	},
 })
 
 wk.add({
