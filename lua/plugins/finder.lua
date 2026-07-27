@@ -5,10 +5,11 @@ vim.pack.add({
 
 -- ######### CONFIG #########
 local fzf_lua = require("fzf-lua")
+local file_edit_action = require("fzf-lua.actions").file_edit
 fzf_lua.setup({
 	files = {
 		actions = {
-			["default"] = require("fzf-lua.actions").file_edit,
+			["default"] = file_edit_action,
 		},
 	},
 	fzf_opts = {
@@ -30,7 +31,7 @@ wk.add({
 		function()
 			fzf_lua.files({
 				actions = {
-					["default"] = require("fzf-lua.actions").file_edit,
+					["default"] = file_edit_action,
 				},
 			})
 		end,
