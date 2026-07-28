@@ -52,7 +52,6 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable({
 	"basedpyright",
 	"bashls",
-	"copilot",
 	"emmet_language_server",
 	"eslint",
 	"golangci_lint_ls",

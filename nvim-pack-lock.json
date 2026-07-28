@@ -1,9 +1,5 @@
 {
   "plugins": {
-    "CopilotChat.nvim": {
-      "rev": "137d3bc527518f5ea982c43c43084496732365c3",
-      "src": "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
-    },
     "LuaSnip": {
       "rev": "458560534a73f7f8d7a11a146c801db00b081df0",
       "src": "https://github.com/L3MON4D3/LuaSnip",
@@ -27,7 +23,7 @@
       "src": "https://github.com/yutkat/confirm-quit.nvim"
     },
     "copilot.lua": {
-      "rev": "61784cb7a1a109d72b9cb107ee70d11bc7d095ff",
+      "rev": "0f616b9a51cb9e2498834dfd99f6da6966158eba",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "earthshine": {
@@ -118,9 +114,9 @@
       "rev": "1af6ffb9b5229a856e8090fa2f690e0931a5aace",
       "src": "https://github.com/jbyuki/one-small-step-for-vimkind"
     },
-    "plenary.nvim": {
-      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
-      "src": "https://github.com/nvim-lua/plenary.nvim"
+    "rowdy": {
+      "rev": "1e4bb0c92d131e5a64ea62ebde509844dc5d00b2",
+      "src": "/Users/edson/code/plugins/rowdy"
     },
     "toggleterm.nvim": {
       "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
