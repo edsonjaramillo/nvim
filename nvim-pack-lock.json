@@ -9,14 +9,6 @@
       "src": "https://github.com/L3MON4D3/LuaSnip",
       "version": "'v2.4.0'"
     },
-    "abide": {
-      "rev": "bef615bcc76b3038acefc37d7db5682d480492f9",
-      "src": "https://github.com/edsonjaramillo/abide"
-    },
-    "alpha-nvim": {
-      "rev": "6c6a89d5b068b5251c8bdf0dd57bb921bcfeeb09",
-      "src": "https://github.com/goolord/alpha-nvim"
-    },
     "blink-copilot": {
       "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
       "src": "https://github.com/fang2hou/blink-copilot"
@@ -41,10 +33,6 @@
     "earthshine": {
       "rev": "237301d327762c9d4fd332c20c8e1063cd3abcb7",
       "src": "/Users/edson/code/plugins/earthshine"
-    },
-    "filemaker": {
-      "rev": "01db3e865365742e0f3b730331abafc6af30c95e",
-      "src": "/Users/edson/code/plugins/filemaker"
     },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
@@ -73,10 +61,6 @@
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
-    },
-    "markview.nvim": {
-      "rev": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
-      "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "noice.nvim": {
       "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
@@ -153,10 +137,6 @@
     "workspace-diagnostics.nvim": {
       "rev": "0dcd7d0a6c8f6e1ddb5bb72e1412aa4c9388718f",
       "src": "https://github.com/artemave/workspace-diagnostics.nvim"
-    },
-    "yazi.nvim": {
-      "rev": "aada50881aca7d13422e02a6681b8f0a0ec9a75c",
-      "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
 }
