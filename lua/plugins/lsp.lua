@@ -116,9 +116,33 @@ wk.add({
 	{
 		"<leader>lD",
 		function()
-			fzf.lsp_workspace_diagnostics()
+			local diagnostics = vim.diagnostic.get(0)
+
+			table.sort(diagnostics, function(a, b)
+				if a.lnum == b.lnum then
+					return a.col < b.col
+				end
+				return a.lnum < b.lnum
+			end)
+
+			local filename = vim.fn.expand("%:p")
+			local cwd = vim.fn.getcwd()
+			if filename:sub(1, #cwd + 1) == cwd .. "/" then
+				filename = filename:sub(#cwd + 2)
+			end
+
+			local lines = {}
+			for _, diagnostic in ipairs(diagnostics) do
+				local location =
+					string.format("%s:%d:%d", filename, diagnostic.lnum + 1, diagnostic.col + 1)
+				local source = diagnostic.source and (diagnostic.source .. ": ") or ""
+				table.insert(lines, string.format("%s %s%s", location, source, diagnostic.message))
+			end
+
+			vim.fn.setreg("+", table.concat(lines, "\n"))
+			vim.notify(string.format("Copied %d diagnostic(s) to the clipboard", #lines))
 		end,
-		desc = "Diagnostics (Workspace)",
+		desc = "Diagnostics Copy",
 	},
 	{
 		"<leader>lr",
