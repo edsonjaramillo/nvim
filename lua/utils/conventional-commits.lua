@@ -5,7 +5,7 @@ local MODEL = "openai/gpt-oss-20b"
 local PROVIDER = "deepinfra/bf16"
 
 local commit_prompt = [[
-Write a concise Conventional Commit for the provided changes.
+Write a concise Conventional Commit for the provided changes. Only output the commit.
 
 Format: <type>(scope): <summary>
 Types: feat, fix, refactor, perf, docs, style, test, build, ci, chore, revert
