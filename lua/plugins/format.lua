@@ -1,13 +1,7 @@
 -- ######### INSTALLATION #########
-local abide_path = "/Users/edson/code/plugins/abide"
-
-if vim.fn.isdirectory(abide_path) == 1 then
-	vim.opt.runtimepath:prepend(abide_path)
-else
-	vim.pack.add({
-		{ src = "https://github.com/edsonjaramillo/abide" },
-	})
-end
+vim.pack.add({
+	{ src = "https://github.com/edsonjaramillo/abide" },
+})
 
 -- ######### CONFIG #########
 require("abide").setup({
