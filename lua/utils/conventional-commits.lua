@@ -1,7 +1,7 @@
 local M = {}
 
 local NOTIFY_TITLE = "Rowdy Commit Message"
-local MODEL = "openai/gpt-oss-20b"
+local MODEL = "openai/gpt-oss-120b"
 local PROVIDER = "deepinfra/bf16"
 
 local commit_prompt = [[
