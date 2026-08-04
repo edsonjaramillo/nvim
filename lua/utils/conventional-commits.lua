@@ -16,11 +16,8 @@ Requirements:
 - Emphasize why and the primary outcome, not implementation details
 - Prefer clarity; add a bullet-point body only when useful
 
-Examples:
+Example:
 feat(auth): add jwt refresh token handling
-fix(api): prevent duplicate invoice creation
-refactor(ui): simplify modal state management
-docs(readme): update local setup instructions
 ]]
 
 local function is_available(bufnr)
