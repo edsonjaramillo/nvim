@@ -1,6 +1,6 @@
 -- ######### INSTALLATION #########
 vim.pack.add({
-	{ src = "/Users/edson/code/plugins/rowdy" },
+	{ src = "https://github.com/edsonjaramillo/rowdy" },
 })
 
 -- ######### CONFIG #########
