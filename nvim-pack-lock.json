@@ -26,9 +26,9 @@
       "rev": "a1dbd9b553e8d6770cd6a879a3ee8ffad292c70c",
       "src": "https://github.com/yutkat/confirm-quit.nvim"
     },
-    "earthshine": {
+    "earthshine-nvim": {
       "rev": "237301d327762c9d4fd332c20c8e1063cd3abcb7",
-      "src": "/Users/edson/code/plugins/earthshine"
+      "src": "https://github.com/edsonjaramillo/earthshine-nvim"
     },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",

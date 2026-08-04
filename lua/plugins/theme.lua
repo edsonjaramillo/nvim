@@ -1,6 +1,6 @@
 -- ######### INSTALLATION #########
 vim.pack.add({
-	{ src = "/Users/edson/code/plugins/earthshine" },
+	{ src = "https://github.com/edsonjaramillo/earthshine-nvim" },
 })
 
 -- ######### CONFIG #########
