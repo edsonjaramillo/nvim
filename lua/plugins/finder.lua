@@ -75,6 +75,13 @@ wk.add({
 		desc = "Find grep",
 	},
 	{
+		"<leader>fG",
+		function()
+			fzf_lua.grep_curbuf()
+		end,
+		desc = "Find grep current buffer",
+	},
+	{
 		"<leader>fr",
 		function()
 			fzf_lua.oldfiles({
