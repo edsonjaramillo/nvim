@@ -1,3 +1,7 @@
+vim.pack.add({
+	"https://github.com/mplusp/pack-manager.nvim",
+})
+
 -- Plugins as prerequisites
 require("plugins.keymaps")
 require("plugins.theme")

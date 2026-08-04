@@ -22,10 +22,6 @@
       "rev": "a1dbd9b553e8d6770cd6a879a3ee8ffad292c70c",
       "src": "https://github.com/yutkat/confirm-quit.nvim"
     },
-    "copilot.lua": {
-      "rev": "0f616b9a51cb9e2498834dfd99f6da6966158eba",
-      "src": "https://github.com/zbirenbaum/copilot.lua"
-    },
     "earthshine": {
       "rev": "237301d327762c9d4fd332c20c8e1063cd3abcb7",
       "src": "/Users/edson/code/plugins/earthshine"
@@ -113,6 +109,10 @@
     "one-small-step-for-vimkind": {
       "rev": "1af6ffb9b5229a856e8090fa2f690e0931a5aace",
       "src": "https://github.com/jbyuki/one-small-step-for-vimkind"
+    },
+    "pack-manager.nvim": {
+      "rev": "e947437ab03c2e20d7eb4e27d1a5f043a9ab1d72",
+      "src": "https://github.com/mplusp/pack-manager.nvim"
     },
     "rowdy": {
       "rev": "1e4bb0c92d131e5a64ea62ebde509844dc5d00b2",
