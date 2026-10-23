@@ -62,10 +62,8 @@ o.mouse = "a"
 o.foldenable = true
 o.foldlevel = 99
 o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
-if vim.fn.exists("*nvim_treesitter#foldexpr") == 0 then
-	o.foldexpr = "0"
-end
+o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+o.foldtext = ""
 
 o.backspace = { "indent", "eol", "start" }
 o.confirm = true
