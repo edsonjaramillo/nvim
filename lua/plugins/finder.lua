@@ -12,9 +12,7 @@ fzf_lua.setup({
 			["default"] = file_edit_action,
 		},
 	},
-	fzf_opts = {
-		["--algo"] = "v2",
-	},
+	ui_select = true,
 })
 
 -- ######### KEYMAPS #########
@@ -29,30 +27,21 @@ wk.add({
 	{
 		"<leader>ff",
 		function()
-			fzf_lua.files({
-				actions = {
-					["default"] = file_edit_action,
-				},
-			})
+			fzf_lua.files()
 		end,
 		desc = "Find Files",
 	},
 	{
 		"<leader>fc",
 		function()
-			fzf_lua.files({
-				cwd = "~/.config/nvim",
-			})
+			fzf_lua.files({ cwd = vim.fn.stdpath("config") })
 		end,
 		desc = "Find nvim config files",
 	},
 	{
 		"<leader>f.",
 		function()
-			fzf_lua.files({
-				cwd = "~/dotfiles/",
-				hidden = true,
-			})
+			fzf_lua.files({ cwd = "~/dotfiles/", hidden = true })
 		end,
 		desc = "Find dotfiles",
 	},
@@ -96,5 +85,34 @@ wk.add({
 			fzf_lua.git_status()
 		end,
 		desc = "Find git status",
+	},
+	-- IMPROVEMENT: extra pickers that are handy for config work and recovery.
+	{
+		"<leader>fh",
+		function()
+			fzf_lua.helptags()
+		end,
+		desc = "Find help tags",
+	},
+	{
+		"<leader>fk",
+		function()
+			fzf_lua.keymaps()
+		end,
+		desc = "Find keymaps",
+	},
+	{
+		"<leader>fw",
+		function()
+			fzf_lua.grep_cword()
+		end,
+		desc = "Find word under cursor",
+	},
+	{
+		"<leader>fR",
+		function()
+			fzf_lua.resume()
+		end,
+		desc = "Resume last picker",
 	},
 })
