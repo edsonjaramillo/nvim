@@ -1,6 +1,5 @@
 -- ######### INSTALLATION #########
 vim.pack.add({
-	{ src = "https://github.com/ibhagwan/fzf-lua" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 })
 
@@ -86,7 +85,6 @@ vim.diagnostic.config({
 })
 
 -- ######### KEYMAPS #########
-local fzf = require("fzf-lua")
 local wk = require("which-key")
 
 wk.add({
@@ -103,7 +101,7 @@ wk.add({
 	{
 		"<leader>ld",
 		function()
-			fzf.lsp_document_diagnostics()
+			require("fzf-lua").lsp_document_diagnostics()
 		end,
 		desc = "Diagnostics",
 	},

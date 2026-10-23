@@ -47,7 +47,7 @@ wk.add({
 	{
 		"<leader>df",
 		function()
-			vim.cmd("luafile %")
+			vim.cmd("RunFile")
 		end,
 		desc = "Debug Current File (OSV)",
 	},

@@ -9,18 +9,6 @@ vim.pack.add({
 })
 
 -- ######### CONFIG #########
-vim.api.nvim_create_autocmd("PackChanged", {
-	callback = function(event)
-		local plugin = event.data.spec.name
-		local kind = event.data.kind
-
-		if plugin ~= "LuaSnip" or (kind ~= "install" and kind ~= "update") then
-			return
-		end
-
-		vim.system({ "make", "install_jsregexp" }, { cwd = event.data.path }):wait()
-	end,
-})
 
 local lazydev_provider = {
 	default = "lazydev",
@@ -37,8 +25,6 @@ require("lazydev").setup({
 		{ path = "wezterm-types", words = { "wezterm" } },
 	},
 })
-
-require("luasnip.loaders.from_vscode").lazy_load()
 
 require("blink.cmp").setup({
 	sources = {
