@@ -2,7 +2,7 @@ local M = {}
 
 local NOTIFY_TITLE = "Rowdy Commit Message"
 local MODEL = "openai/gpt-oss-120b"
-local PROVIDER = "deepinfra/bf16"
+local PROVIDER = "coreweave/fp4"
 
 local commit_prompt = [[
 Write a concise Conventional Commit for the provided changes. Only output the commit.
