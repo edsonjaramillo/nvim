@@ -32,7 +32,7 @@ wk.add({
 })
 
 wk.add({
-	mode = { "x", "o" },
+	mode = { "o" },
 	{
 		"r",
 		function()
@@ -40,6 +40,10 @@ wk.add({
 		end,
 		desc = "Treesitter Search",
 	},
+})
+
+wk.add({
+	mode = { "x", "o" },
 	{
 		"s",
 		function()

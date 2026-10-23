@@ -66,7 +66,6 @@ wk.add({
 	{ "<leader>sd", ":'<,'>sort!<CR>", desc = "Sort Descending" },
 	{ "<leader>su", ":'<,'>sort u<CR>", desc = "Sort Unique" },
 	{ "<leader>sn", ":'<,'>sort n<CR>", desc = "Sort Numerically" },
-	{ "<leader>sr", ":'<,'>sort r<CR>", desc = "Sort Reverse" },
 	{ "<leader>si", ":'<,'>sort i<CR>", desc = "Sort Ignore Case" },
 })
 

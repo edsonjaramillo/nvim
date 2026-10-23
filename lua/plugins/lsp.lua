@@ -152,9 +152,9 @@ wk.add({
 	},
 	{
 		"K",
-		vim.lsp.buf.hover({
-			focusable = false,
-		}),
+		function()
+			vim.lsp.buf.hover({ focusable = false })
+		end,
 		desc = "Hover",
 	},
 })

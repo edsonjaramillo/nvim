@@ -83,7 +83,7 @@ o.guicursor = table.concat({
 	"v:block-VisualCursor/lCursor",
 	"V:block-VisualCursor/lCursor",
 	"i-ci:ver25-iCursor/lCursor",
-	"r-cr:vej25-ReplaceCursor/lCursor",
+	"r-cr:hor20-ReplaceCursor/lCursor",
 }, ",")
 
 local sethl = vim.api.nvim_set_hl
