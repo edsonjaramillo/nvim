@@ -1,8 +1,23 @@
 local dev = require("utils.dev")
 
+local group = vim.api.nvim_create_augroup("user_qol", { clear = true })
+
+-- Briefly highlight the yanked text so you can see what was copied.
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = group,
+	callback = function()
+		vim.hl.on_yank({ timeout = 150 })
+	end,
+})
+
 -- Return to last cursor position when reopening filetypes
 vim.api.nvim_create_autocmd("BufReadPost", {
-	callback = function()
+	group = group,
+	callback = function(event)
+		if vim.tbl_contains({ "gitcommit", "gitrebase" }, vim.bo[event.buf].filetype) then
+			return
+		end
+
 		local mark = vim.api.nvim_buf_get_mark(0, '"')
 		local lcount = vim.api.nvim_buf_line_count(0)
 		if mark[1] > 0 and mark[1] <= lcount then
@@ -13,6 +28,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 -- Reload file if changed outside of nvim
 vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
+	group = group,
 	command = "checktime",
 })
 
