@@ -45,7 +45,6 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable({
-	"basedpyright",
 	"bashls",
 	"emmet_language_server",
 	"eslint",
@@ -59,6 +58,7 @@ vim.lsp.enable({
 	"tailwindcss",
 	"taplo",
 	"tsc",
+	"ty",
 	"yamlls",
 })
 
