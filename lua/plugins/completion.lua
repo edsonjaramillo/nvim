@@ -6,7 +6,6 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1") },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
 	{ src = "https://github.com/L3MON4D3/LuaSnip", version = "v2.4.0", name = "LuaSnip" },
-	{ src = "https://github.com/fang2hou/blink-copilot" },
 })
 
 -- ######### CONFIG #########
@@ -32,16 +31,6 @@ local lazydev_provider = {
 	},
 }
 
-local copilot_provider = {
-	default = "copilot",
-	provider = {
-		name = "copilot",
-		module = "blink-copilot",
-		score_offset = 100,
-		async = true,
-	},
-}
-
 require("lazydev").setup({
 	library = {
 		{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
@@ -54,7 +43,6 @@ require("luasnip.loaders.from_vscode").lazy_load()
 require("blink.cmp").setup({
 	sources = {
 		default = {
-			copilot_provider.default,
 			"lsp",
 			lazydev_provider.default,
 			"path",
@@ -63,7 +51,6 @@ require("blink.cmp").setup({
 		},
 		providers = {
 			lazydev = lazydev_provider.provider,
-			copilot = copilot_provider.provider,
 		},
 	},
 	completion = {
