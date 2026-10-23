@@ -19,11 +19,13 @@ local lazydev_provider = {
 	},
 }
 
+local local_plugins = vim.fn.globpath(vim.fn.expand("~/code/plugins"), "*", false, true)
+
 require("lazydev").setup({
-	library = {
+	library = vim.list_extend({
 		{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 		{ path = "wezterm-types", words = { "wezterm" } },
-	},
+	}, local_plugins),
 })
 
 require("blink.cmp").setup({

@@ -19,24 +19,13 @@ vim.lsp.config("oxlint", {
 	},
 })
 
-local plugin_paths = vim.fn.globpath(vim.fn.expand("~/code/plugins/"), "*/lua", false, true)
-local library = vim.list_extend({
-	vim.env.VIMRUNTIME,
-	"${VIMRUNTIME}/lua",
-	"${VIMRUNTIME}/lua/vim",
-}, plugin_paths)
-
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			runtime = {
 				version = "LuaJIT",
 			},
-			diagnostics = {
-				globals = { "vim" },
-			},
 			workspace = {
-				library = library,
 				checkThirdParty = false,
 			},
 		},
