@@ -5,8 +5,7 @@ vim.pack.add({
 
 -- ######### CONFIG #########
 local oil = require("oil")
-oil.setup()
-oil.toggle_hidden()
+oil.setup({ view_options = { show_hidden = true } })
 
 -- ######### KEYMAPS #########
 local wk = require("which-key")
@@ -23,5 +22,12 @@ wk.add({
 			oil.open()
 		end,
 		desc = "Open Oil Explorer",
+	},
+	{
+		"-",
+		function()
+			oil.open()
+		end,
+		desc = "Open Parent Directory",
 	},
 })
