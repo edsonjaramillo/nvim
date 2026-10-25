@@ -34,6 +34,7 @@ vim.lsp.config("lua_ls", {
 
 vim.lsp.enable({
 	"bashls",
+	"clangd",
 	"emmet_language_server",
 	"eslint",
 	"golangci_lint_ls",
