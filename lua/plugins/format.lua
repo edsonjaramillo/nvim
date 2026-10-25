@@ -7,6 +7,7 @@ vim.pack.add({
 require("abide").setup({
 	formatters = {
 		alejandra = { enabled = true },
+		clang_format = { enabled = true },
 		gofumpt = { enabled = true },
 		oxfmt = { enabled = true },
 		ruff = { enabled = true, config_files = { "ruff.toml" } },

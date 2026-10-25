@@ -6,7 +6,7 @@
       "version": "'v2.4.0'"
     },
     "abide": {
-      "rev": "9bcf9b6cf4fdfe73cfd208b9e1311839f1285f1d",
+      "rev": "29fe2d047ddd58f981da9699c65a94ee5bbbebab",
       "src": "https://github.com/edsonjaramillo/abide"
     },
     "blink.cmp": {
