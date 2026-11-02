@@ -9,6 +9,10 @@
       "rev": "29fe2d047ddd58f981da9699c65a94ee5bbbebab",
       "src": "https://github.com/edsonjaramillo/abide"
     },
+    "better-escape.nvim": {
+      "rev": "3f4bc0b326606264ff75967f59091b5ddada0554",
+      "src": "https://github.com/max397574/better-escape.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
