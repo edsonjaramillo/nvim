@@ -8,9 +8,13 @@ local fzf_lua = require("fzf-lua")
 local file_edit_action = require("fzf-lua.actions").file_edit
 fzf_lua.setup({
 	files = {
+		hidden = true,
 		actions = {
 			["default"] = file_edit_action,
 		},
+	},
+	grep = {
+		hidden = true,
 	},
 	ui_select = true,
 })
@@ -41,7 +45,7 @@ wk.add({
 	{
 		"<leader>f.",
 		function()
-			fzf_lua.files({ cwd = "~/dotfiles/", hidden = true })
+			fzf_lua.files({ cwd = "~/dotfiles/" })
 		end,
 		desc = "Find dotfiles",
 	},
