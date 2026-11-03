@@ -31,4 +31,8 @@ require("notify").setup({
 	timeout = 1000,
 })
 
-require("noice").setup()
+require("noice").setup({
+	-- blink.cmp handles signature help (see completion.lua); turn Noice's off
+	-- so two signature popups don't show at the same time.
+	lsp = { signature = { enabled = false } },
+})
