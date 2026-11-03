@@ -1,10 +1,5 @@
 {
   "plugins": {
-    "LuaSnip": {
-      "rev": "458560534a73f7f8d7a11a146c801db00b081df0",
-      "src": "https://github.com/L3MON4D3/LuaSnip",
-      "version": "'v2.4.0'"
-    },
     "abide": {
       "rev": "29fe2d047ddd58f981da9699c65a94ee5bbbebab",
       "src": "https://github.com/edsonjaramillo/abide"
@@ -21,6 +16,10 @@
     "bufferline.nvim": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
+    },
+    "colorful-menu.nvim": {
+      "rev": "196ddf16d5f8fec09ba7f20e6b153aa5188e907b",
+      "src": "https://github.com/xzbdmw/colorful-menu.nvim"
     },
     "confirm-quit.nvim": {
       "rev": "a1dbd9b553e8d6770cd6a879a3ee8ffad292c70c",
