@@ -1,35 +1,42 @@
 -- ######### INSTALLATION #########
 vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-	{ src = "https://github.com/rcarriga/nvim-notify" },
+	{ src = "https://github.com/folke/snacks.nvim" },
 	{ src = "https://github.com/MunifTanjim/nui.nvim" },
 	{ src = "https://github.com/folke/noice.nvim" },
 })
 
 -- ######### CONFIG #########
+require("snacks").setup({
+	notifier = {
+		enabled = true,
+		timeout = 1500,
+		date_format = "%-I:%M:%S %p",
+	},
+	picker = {
+		enabled = true,
+		ui_select = true,
+		sources = {
+			files = { hidden = true },
+			grep = { hidden = true },
+			grep_word = { hidden = true },
+		},
+	},
+	terminal = { enabled = true },
+})
+
 local colors = {
-	ERROR = "#e35659",
-	WARN = "#f8cc5a",
-	INFO = "#409cff",
-	DEBUG = "#aeaeae",
+	Error = "#e35659",
+	Warn = "#f8cc5a",
+	Info = "#409cff",
+	Debug = "#aeaeae",
 }
 
-local highlights = { "Border", "Icon", "Title" }
-
-for _, highlight in ipairs(highlights) do
-	for level, color in pairs(colors) do
-		vim.api.nvim_set_hl(0, "Notify" .. level .. highlight, { fg = color })
+for level, color in pairs(colors) do
+	for _, part in ipairs({ "Border", "Icon", "Title" }) do
+		vim.api.nvim_set_hl(0, "SnacksNotifier" .. part .. level, { fg = color })
 	end
 end
-
-require("notify").setup({
-	merge_duplicates = true,
-	background_colour = "#030303",
-	time_formats = {
-		notification = "%-I:%M:%S %p",
-	},
-	timeout = 1000,
-})
 
 require("noice").setup({
 	-- blink.cmp handles signature help (see completion.lua); turn Noice's off
