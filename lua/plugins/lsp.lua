@@ -91,7 +91,7 @@ wk.add({
 	{
 		"<leader>ld",
 		function()
-			require("fzf-lua").lsp_document_diagnostics()
+			snacks.picker.diagnostics_buffer()
 		end,
 		desc = "Diagnostics",
 	},
@@ -134,7 +134,7 @@ wk.add({
 	{
 		"<leader>lc",
 		function()
-			require("fzf-lua").lsp_code_actions()
+			vim.lsp.buf.code_action()
 		end,
 		desc = "Code Actions",
 	},

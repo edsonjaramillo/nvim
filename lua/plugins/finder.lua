@@ -1,23 +1,5 @@
--- ######### INSTALLATION #########
-vim.pack.add({
-	{ src = "https://github.com/ibhagwan/fzf-lua" },
-})
-
 -- ######### CONFIG #########
-local fzf_lua = require("fzf-lua")
-local file_edit_action = require("fzf-lua.actions").file_edit
-fzf_lua.setup({
-	files = {
-		hidden = true,
-		actions = {
-			["default"] = file_edit_action,
-		},
-	},
-	grep = {
-		hidden = true,
-	},
-	ui_select = true,
-})
+local snacks = require("snacks")
 
 -- ######### KEYMAPS #########
 local wk = require("which-key")
@@ -31,91 +13,84 @@ wk.add({
 	{
 		"<leader>ff",
 		function()
-			fzf_lua.files()
+			snacks.picker.files()
 		end,
 		desc = "Find Files",
 	},
 	{
 		"<leader>fc",
 		function()
-			fzf_lua.files({ cwd = vim.fn.stdpath("config") })
+			snacks.picker.files({ cwd = vim.fn.stdpath("config") })
 		end,
 		desc = "Find nvim config files",
 	},
 	{
 		"<leader>f.",
 		function()
-			fzf_lua.files({ cwd = "~/dotfiles/" })
+			snacks.picker.files({ cwd = vim.fn.expand("~/dotfiles/") })
 		end,
 		desc = "Find dotfiles",
 	},
 	{
 		"<leader>fb",
 		function()
-			fzf_lua.buffers()
+			snacks.picker.buffers()
 		end,
 		desc = "Find Buffers",
 	},
 	{
 		"<leader>fg",
 		function()
-			fzf_lua.live_grep({
-				actions = {
-					["default"] = require("fzf-lua.actions").file_edit,
-				},
-			})
+			snacks.picker.grep()
 		end,
 		desc = "Find grep",
 	},
 	{
 		"<leader>fG",
 		function()
-			fzf_lua.grep_curbuf()
+			snacks.picker.lines()
 		end,
 		desc = "Find grep current buffer",
 	},
 	{
 		"<leader>fr",
 		function()
-			fzf_lua.oldfiles({
-				cwd_only = true,
-			})
+			snacks.picker.recent({ filter = { cwd = true } })
 		end,
 		desc = "Find recent files",
 	},
 	{
 		"<leader>fs",
 		function()
-			fzf_lua.git_status()
+			snacks.picker.git_status()
 		end,
 		desc = "Find git status",
 	},
-	-- IMPROVEMENT: extra pickers that are handy for config work and recovery.
 	{
 		"<leader>fh",
 		function()
-			fzf_lua.helptags()
+			snacks.picker.help()
 		end,
 		desc = "Find help tags",
 	},
 	{
 		"<leader>fk",
 		function()
-			fzf_lua.keymaps()
+			snacks.picker.keymaps()
 		end,
 		desc = "Find keymaps",
 	},
 	{
 		"<leader>fw",
 		function()
-			fzf_lua.grep_cword()
+			snacks.picker.grep_word()
 		end,
 		desc = "Find word under cursor",
 	},
 	{
 		"<leader>fR",
 		function()
-			fzf_lua.resume()
+			snacks.picker.resume()
 		end,
 		desc = "Resume last picker",
 	},

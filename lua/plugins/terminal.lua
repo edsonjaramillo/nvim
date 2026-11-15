@@ -1,40 +1,33 @@
--- ######### INSTALLATION #########
-vim.pack.add({
-	{ src = "https://github.com/akinsho/toggleterm.nvim" },
-})
-
 -- ######### CONFIG #########
-local toggleterm = require("toggleterm")
-toggleterm.setup({
-	hide_numbers = true,
-	-- VSCode-style bottom panel: ~30% of the editor height
-	size = function(term)
-		if term.direction == "horizontal" then
-			return math.floor(vim.o.lines * 0.3)
-		end
-		return 20
-	end,
-	shade_terminals = false,
-	start_in_insert = true,
-	persist_size = true,
-	persist_mode = true,
-})
+local snacks = require("snacks")
 
-local terminal = require("toggleterm.terminal").Terminal
+---@type snacks.terminal.Opts
+local terminal_opts = {
+	win = {
+		-- VSCode-style bottom panel: ~30% of the editor height
+		position = "bottom",
+		height = 0.3,
+		wo = {
+			signcolumn = "no",
+			number = false,
+			relativenumber = false,
+			winfixheight = true,
+		},
+		-- Use the global <Esc><Esc> mapping below instead of snacks' version
+		keys = { term_normal = false },
+	},
+}
 
-local basic_terminal = terminal:new({
-	hidden = true,
-	direction = "horizontal",
-	on_open = function(term)
-		vim.cmd("startinsert!")
-		-- Window-only options so it looks like a panel
-		vim.wo[term.window].signcolumn = "no"
-		vim.wo[term.window].winfixheight = true
-	end,
-})
+-- Keep a single terminal instance, even if the cwd changes
+---@type snacks.win?
+local basic_terminal
 
 local function toggle_terminal()
-	basic_terminal:toggle()
+	if basic_terminal and basic_terminal:buf_valid() then
+		basic_terminal:toggle()
+	else
+		basic_terminal = snacks.terminal.open(nil, terminal_opts)
+	end
 end
 
 -- ######### KEYMAPS #########
