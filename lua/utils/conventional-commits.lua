@@ -1,8 +1,8 @@
 local M = {}
 
 local NOTIFY_TITLE = "Rowdy Commit Message"
-local MODEL = "openai/gpt-oss-120b"
-local PROVIDER = "deepinfra/bf16"
+local MODEL = "tencent/hy4-flash"
+local PROVIDER = "tencent"
 
 local commit_prompt = [[
 Write a concise Conventional Commit for the provided changes. Only output the commit.
