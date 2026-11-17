@@ -38,14 +38,17 @@ local function get_gitcommit_bufnr()
 end
 
 local function create_notifier()
-	local record = vim.notify("Generating commit message...", vim.log.levels.INFO, {
+	-- A stable id makes snacks.notifier (via noice) update the same notification in place.
+	local id = "rowdy_commit_message"
+	vim.notify("Generating commit message...", vim.log.levels.INFO, {
+		id = id,
 		title = NOTIFY_TITLE,
 		timeout = false,
 	})
 
 	local function replace(message, level)
 		vim.notify(message, level, {
-			replace = record,
+			id = id,
 			title = NOTIFY_TITLE,
 			timeout = 3000,
 		})
