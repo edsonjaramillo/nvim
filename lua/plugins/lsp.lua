@@ -75,6 +75,7 @@ vim.diagnostic.config({
 })
 
 -- ######### KEYMAPS #########
+local snacks = require("snacks")
 local wk = require("which-key")
 
 wk.add({

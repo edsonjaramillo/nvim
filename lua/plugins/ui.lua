@@ -1,7 +1,6 @@
 -- ######### INSTALLATION #########
 vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-	{ src = "https://github.com/folke/snacks.nvim" },
 	{ src = "https://github.com/MunifTanjim/nui.nvim" },
 	{ src = "https://github.com/folke/noice.nvim" },
 })

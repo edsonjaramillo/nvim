@@ -1,5 +1,6 @@
 vim.pack.add({
-	"https://github.com/mplusp/pack-manager.nvim",
+	{ src = "https://github.com/mplusp/pack-manager.nvim" },
+	{ src = "https://github.com/folke/snacks.nvim" },
 })
 
 -- Plugins as prerequisites
