@@ -46,7 +46,7 @@ vim.lsp.enable({
 	"oxlint",
 	"tailwindcss",
 	"taplo",
-	"tsc",
+	"tsrs",
 	"ty",
 	"yamlls",
 })
