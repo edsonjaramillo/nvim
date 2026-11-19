@@ -6,21 +6,18 @@ vim.pack.add({
 -- ######### CONFIG #########
 require("lualine").setup({
 	options = {
-		theme = require("lualine.themes.earthshine"),
+		theme = "earthshine",
+		globalstatus = true, -- matches `laststatus = 3` in options.lua
 	},
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff" },
-		lualine_c = { "diagnostics" },
-		lualine_x = { "filetype", "lsp_status" },
-		lualine_y = { "windows" },
-		lualine_z = {
-			{
-				--- macro recording on statusline
-				require("noice").api.statusline.mode.get,
-				cond = require("noice").api.statusline.mode.has,
-				color = { fg = "#ffffff", bg = "#550000" },
-			},
+		lualine_c = {
+			{ "filename", path = 1 }, -- relative path
+			"diagnostics",
 		},
+		lualine_x = { "lsp_status", "filetype" },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
 	},
 })
